@@ -11,8 +11,17 @@ body {
   /* 배달의 민족 주아체 사용 */
 }
 
+.profile-img {
+  width: 300px; /* 이미지 너비 */
+  height: 300px; /* 이미지 높이 */
+  background-image: url("/images/projects/rupy_first.png"); /* 기본 배경 이미지 */
+  background-size: cover; /* 이미지를 컨테이너에 맞게 조정 */
+  transition: border-color 0.3s ease; /* 테두리 색상 변경에 트랜지션 적용 */
+}
+
 .profile-img:hover {
-  background-image: url("/images/projects/rupy.jpeg");
+  transition: all 0.4s linear;
+  background-image: url("/images/projects/rupy_second.png");
 }
 .top-nav {
   padding: 40px 10px;
@@ -23,7 +32,14 @@ body {
 
 .top-logo {
   width: 97px;
-  height: 59px;
+  height: 97px;
+}
+
+@media (max-width: 768px) {
+  .top-logo {
+    width: 60px;
+    height: 40px;
+  }
 }
 
 .nav-items {
@@ -35,12 +51,35 @@ body {
   gap: 50px;
 }
 
+.nav-items.mobile {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .nav-items {
+    /* PC */
+    display: none;
+  }
+  .nav-items.mobile {
+    /* mobile */
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .nav-items li {
+    font-size: 16px;
+  }
+}
+
 .nav-items li {
   /* 상단 메뉴 글자에 대한 스타일 */
   color: #666;
   font-size: 20px;
   font-weight: 500;
   line-height: 26px; /* 130% */
+}
+.nav-items a {
+  text-decoration: none;
 }
 
 .top-sns {
@@ -83,6 +122,23 @@ header img {
   border-radius: 50%;
 }
 
+@media (max-width: 768px) {
+  header {
+    flex-direction: column-reverse;
+    padding-top: 68px;
+    padding-bottom: 160px;
+    gap: 10px;
+  }
+
+  header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -1px;
+    text-align: center;
+  }
+}
+
 /* ------- 기술 스택 섹션 ----- */
 
 .section-text {
@@ -103,6 +159,30 @@ header img {
   font-weight: 400;
 }
 
+@media (max-width: 768px) {
+  .section-text {
+    padding-bottom: 30px;
+  }
+  .section-text h2 {
+    color: rgb(66, 68, 110);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: -2%;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .section-text p {
+    color: rgb(102, 102, 102);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+}
+
 .tech-stacks {
   display: flex;
   gap: 50px;
@@ -114,8 +194,24 @@ header img {
   text-align: center;
 }
 
+.tech-stacks img {
+  width: 150px;
+  height: 150px;
+}
+
 #tech-stack {
   padding-bottom: 300px;
+}
+
+@media (max-width: 768px) {
+  .tech-stacks img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .tech-stacks {
+    gap: 10px;
+  }
 }
 
 /* ------- 프로젝트 섹션 ----- */
@@ -128,12 +224,14 @@ header img {
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
 }
+
 .project-item {
   box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
 }
 
 .project-item:hover {
+  transition: all 0.4s linear;
   transform: scale(1.2);
 }
 
@@ -165,7 +263,6 @@ header img {
 }
 .project-thumbnail-5 {
   background-image: url("/images/projects/runners.png");
-  background-size: 90%;
 }
 
 .project-thumbnail-6 {
@@ -177,6 +274,7 @@ header img {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  text-align: center;
 }
 .project-content h4 {
   text-align: center;
@@ -202,7 +300,7 @@ header img {
 
 .project-desc {
   color: #666;
-  font-size: 18px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 300;
   line-height: 26px; /* 144.444% */
@@ -210,10 +308,21 @@ header img {
 
 .project-tech-stack {
   color: #42446e;
-  font-size: 16px;
+  font-size: 13px;
   font-style: normal;
   font-weight: 400;
   line-height: 26px; /* 162.5% */
+}
+
+@media (max-width: 700px) {
+  .project-items {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+
+  .project-content {
+    padding: 10px;
+  }
 }
 
 /* ---- footer ---- */
@@ -234,8 +343,8 @@ footer {
 }
 
 .footer-logo {
-  width: 97px;
-  height: 59px;
+  width: 100px;
+  height: 100px;
 }
 
 .footer-contact {
@@ -258,6 +367,22 @@ footer .footer-links {
   gap: 20px;
 }
 
+@media (max-width: 768px) {
+  .footer-contact a.tel {
+    /* a태그가에 tel 클래스 */
+    display: none;
+  }
+
+  .footer-contact {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  footer {
+    gap: 24px;
+  }
+}
+
 .hr {
   width: 100%;
   border-bottom: solid 1px #666;
@@ -275,4 +400,22 @@ footer .footer-links {
   background: linear-gradient(0deg, #13b0f5 -2.06%, #e70faa 100%);
   background-clip: text;
   color: transparent; /* 글자 색을 투명하게 */
+}
+
+.br-tag {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* 모바일 버전시 텍스트 줄바꿈 진행 */
+  .br-tag {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  /* 모바일 버전시 텍스트 줄바꿈 진행 */
+  #project-section {
+    padding-bottom: 150px;
+  }
 }
