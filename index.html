@@ -24,10 +24,10 @@
       <!-- 메뉴 아이템 -->
       <ul class="nav-items">
         <li><a href="#">Home</a></li>
-        <li><a href="#tech-stack">About</a></li>
+        <li><a href="#introduce">About</a></li>
         <li><a href="#tech-stack">Tech Stack</a></li>
-        <li><a href="#tech-stack">Projects</a></li>
-        <li><a href="#tech-stack">Contact</a></li>
+        <li><a href="#project-section">Projects</a></li>
+        <li><a href="#tel">Contact</a></li>
       </ul>
       <!-- SNS Link -->
       <div class="top-sns">
@@ -38,24 +38,25 @@
 
       <ul class="nav-items mobile">
         <li><a href="#">Home</a></li>
-        <li><a href="#tech-stack">About</a></li>
+        <li><a href="#introduce">About</a></li>
         <li><a href="#tech-stack">Tech Stack</a></li>
-        <li><a href="#tech-stack">Projects</a></li>
-        <li><a href="#tech-stack">Contact</a></li>
+        <li><a href="#project-section">Projects</a></li>
+        <li><a href="#tel">Contact</a></li>
       </ul>
     </nav>
     <!-- 헤더 : 내소개 -->
     <header>
-      <h1>
+      <h1 id="introduce">
         반가워요 👋<br />
         제 이름은 <span>호익</span>입니다!<br />
         저는 풀스택 개발자가 되고 싶어요!
       </h1>
-      <img
+      <div class="profile-img"></div>
+      <!-- <img
         class="profile-img"
         src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA4MTdfMTg5%2FMDAxNjYwNzQ1MzM1MzY1.xAAcJCKb3GLg8uYeK9GRLc8ouXInOQvC0QD_4v1EmkQg.Zl84E1Aa-pAGyBJUjyCKftErd14n7KHiPVI1z7aW_Dcg.JPEG.zhenzhen15%2FIMG_2876.jpg&type=sc960_832"
         alt="profile"
-      />
+      /> -->
     </header>
 
     <!-- 기술 스택 섹션 -->
@@ -66,41 +67,41 @@
       </div>
       <ul class="tech-stacks">
         <li>
-          <img src="./images/icons/tech-stacks/tech-stack-1.svg" alt="html" />
+          <img src="./images/icons/tech-stacks/tech-stack-1.png" alt="html" />
         </li>
         <li>
-          <img src="./images/icons/tech-stacks/tech-stack-2.svg" alt="css" />
+          <img src="./images/icons/tech-stacks/tech-stack-2.png" alt="css" />
         </li>
         <li>
-          <img src="./images/icons/tech-stacks/tech-stack-3.svg" alt="js" />
+          <img src="./images/icons/tech-stacks/tech-stack-3.png" alt="js" />
         </li>
         <li>
-          <img src="./images/icons/tech-stacks/tech-stack-4.svg" alt="react" />
+          <img src="./images/icons/tech-stacks/tech-stack-4.png" alt="react" />
         </li>
         <li>
-          <img src="./images/icons/tech-stacks/tech-stack-5.svg" alt="tech" />
+          <img src="./images/icons/tech-stacks/tech-stack-5.png" alt="tech" />
         </li>
         <li>
           <img
-            src="./images/icons/tech-stacks/tech-stack-6.svg"
+            src="./images/icons/tech-stacks/tech-stack-6.png"
             alt="boostrap"
           />
         </li>
         <li>
           <img
-            src="./images/icons/tech-stacks/tech-stack-7.svg"
+            src="./images/icons/tech-stacks/tech-stack-7.png"
             alt="tailwindcss"
           />
         </li>
         <li>
-          <img src="./images/icons/tech-stacks/tech-stack-8.svg" alt="sass" />
+          <img src="./images/icons/tech-stacks/tech-stack-8.png" alt="sass" />
         </li>
         <li>
-          <img src="./images/icons/tech-stacks/tech-stack-9.svg" alt="git" />
+          <img src="./images/icons/tech-stacks/tech-stack-9.png" alt="git" />
         </li>
         <li>
           <img
-            src="./images/icons/tech-stacks/tech-stack-10.svg"
+            src="./images/icons/tech-stacks/tech-stack-10.png"
             alt="greenstock"
           />
         </li>
@@ -154,7 +155,7 @@
           <div class="project-content">
             <h4>청각장애인을 위한 수어 플랫폼</h4>
             <p class="project-desc">
-              수어 번역을 사용해서 청각장애인과 소통할 수 있는 플랫폼
+              수어 번역을 사용한 청각장애인과의 소통 플랫폼
             </p>
             <div class="project-tech-stack">
               기술스택: React, Webapp, Github, AWS S3
@@ -201,7 +202,7 @@
           <div class="project-content">
             <h4>SK 하이닉스 HYPO 출석 프로그램</h4>
             <p class="project-desc">
-              HYPO 학생들의 자동적으로 출석을 확인 해주는 프로그램 제작
+              HYPO 학생들의 자동 출석체크 프로그램 제작
             </p>
             <div class="project-tech-stack">
               기술스택: Python, DBL Square, Excel
@@ -219,7 +220,7 @@
             </div>
           </div>
         </article>
-        <!-- 프로젝트 3 -->
+        <!-- 프로젝트 5 -->
         <article class="project-item">
           <div class="project-thumbnail project-thumbnail-5"></div>
           <div class="project-content">
@@ -241,13 +242,13 @@
             </div>
           </div>
         </article>
-        <!-- 프로젝트 4 -->
+        <!-- 프로젝트 6 -->
         <article class="project-item">
           <div class="project-thumbnail project-thumbnail-6"></div>
           <div class="project-content">
             <h4>피나클 인베스트먼트 웹개발</h4>
             <p class="project-desc">
-              피나클 인베스트먼트사의 홈페이지 서버 및 홈페이지 개발
+              피나클 인베스트먼트사의 홈페이지 서버 및 개발
             </p>
             <div class="project-tech-stack">
               기술스택: HTML5, CSS, JavaScript, PHP, Jquery
@@ -277,7 +278,7 @@
         <img class="footer-logo" src=" ./images/icons/logo.png" alt="logo" />
         <!-- 이메일/연락처/SNS -->
         <div class="footer-content">
-          <div class="footer-contact">
+          <div id="tel" class="footer-contact">
             <a class="tel" href="tel:+1234567890">010-9991-6687</a>
             <a class="email" href="wkdghdlr1@naver.com">wkdghdlr1@naver.com</a>
             <div class="footer-links">
