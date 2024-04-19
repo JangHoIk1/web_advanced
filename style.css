@@ -26,6 +26,13 @@ body {
   height: 59px;
 }
 
+@media (max-width: 768px) {
+  .top-logo {
+    width: 60px;
+    height: 40px;
+  }
+}
+
 .nav-items {
   /* 정렬 */
   display: flex;
@@ -33,6 +40,26 @@ body {
   align-items: center; /* 세로 가운데 정렬 */
   /* flex-item 사이의 간격 */
   gap: 50px;
+}
+
+.nav-items.mobile {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .nav-items {
+    /* PC */
+    display: none;
+  }
+  .nav-items.mobile {
+    /* mobile */
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .nav-items li {
+    font-size: 16px;
+  }
 }
 
 .nav-items li {
@@ -83,6 +110,23 @@ header img {
   border-radius: 50%;
 }
 
+@media (max-width: 768px) {
+  header {
+    flex-direction: column-reverse;
+    padding-top: 68px;
+    padding-bottom: 160px;
+    gap: 10px;
+  }
+
+  header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -1px;
+    text-align: center;
+  }
+}
+
 /* ------- 기술 스택 섹션 ----- */
 
 .section-text {
@@ -103,6 +147,30 @@ header img {
   font-weight: 400;
 }
 
+@media (max-width: 768px) {
+  .section-text {
+    padding-bottom: 30px;
+  }
+  .section-text h2 {
+    color: rgb(66, 68, 110);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: -2%;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .section-text p {
+    color: rgb(102, 102, 102);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+}
+
 .tech-stacks {
   display: flex;
   gap: 50px;
@@ -118,6 +186,17 @@ header img {
   padding-bottom: 300px;
 }
 
+@media (max-width: 768px) {
+  .tech-stacks img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .tech-stacks {
+    gap: 10px;
+  }
+}
+
 /* ------- 프로젝트 섹션 ----- */
 #project-section {
   padding-bottom: 300px;
@@ -128,6 +207,7 @@ header img {
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;
 }
+
 .project-item {
   box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
@@ -155,6 +235,7 @@ header img {
 
 .project-thumbnail-2 {
   background-image: url("/images/projects/sign-language.png");
+  background-size: 65%;
 }
 
 .project-thumbnail-3 {
@@ -216,6 +297,17 @@ header img {
   line-height: 26px; /* 162.5% */
 }
 
+@media (max-width: 700px) {
+  .project-items {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+
+  .project-content {
+    padding: 10px;
+  }
+}
+
 /* ---- footer ---- */
 footer {
   display: flex;
@@ -258,6 +350,22 @@ footer .footer-links {
   gap: 20px;
 }
 
+@media (max-width: 768px) {
+  .footer-contact a.tel {
+    /* a태그가에 tel 클래스 */
+    display: none;
+  }
+
+  .footer-contact {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  footer {
+    gap: 24px;
+  }
+}
+
 .hr {
   width: 100%;
   border-bottom: solid 1px #666;
@@ -275,4 +383,22 @@ footer .footer-links {
   background: linear-gradient(0deg, #13b0f5 -2.06%, #e70faa 100%);
   background-clip: text;
   color: transparent; /* 글자 색을 투명하게 */
+}
+
+.br-tag {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* 모바일 버전시 텍스트 줄바꿈 진행 */
+  .br-tag {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  /* 모바일 버전시 텍스트 줄바꿈 진행 */
+  #project-section {
+    padding-bottom: 150px;
+  }
 }
